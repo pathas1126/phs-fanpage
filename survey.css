@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 49px;
+  background-image: url(images/bg2.png);
+  background-size: 100% 100%;
+  /* 스크롤바를 없애기 위해 사용 */
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+table {
+  /* 상하 여백을 적당히 두고 수평으로 중앙정렬 */
+  margin: 150px auto;
+  /* 테두리가 답답해 보이지 않게 패딩 설정 */
+  padding: 19px;
+  width: 400px;
+  height: 500px;
+  background-color: rgba(33, 33, 33, 0.2);
+  /* table의 모서리를 둥글게 하기 위해 설정 */
+  border-radius: 5%;
+  font-family: "Indie Flower", cursive;
+  color: rgba(214, 212, 212, 0.89);
+}
+
+/* e-mail박스 스타일 설정 */
+.table_e-mail {
+  width: 190px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 0px 7px 10px;
+  font-family: "Indie Flower", cursive;
+}
+
+.table_gender {
+  margin: 10px;
+}
+
+.table_age {
+  margin: 5px 0px;
+  padding: 7px 0px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+}
+
+.table_visit {
+  margin: 5px 0px;
+  padding: 7px 0px 7px 10px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Indie Flower", cursive;
+}
+
+.table_album {
+  margin: 7px 3px;
+}
+
+.table_song {
+  margin: 7px 0px;
+  padding-left: 10px;
+  width: 190px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 0px 7px 10px;
+  font-family: "Indie Flower", cursive;
+}
+
+.table_suggest {
+  margin-top: 5px;
+  width: 190px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-family: "Indie Flower", cursive;
+}
+/* 입력 양식을 비슷한 스타일로 디자인함 */
+
+.table_submit {
+  margin-top: 20px;
+  margin-left: 140px;
+  width: 75px;
+  height: 33px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(105, 102, 102);
+  /* submit버튼의 텍스트 그림자 설정 */
+  text-shadow: 2px 2px 4px rgba(22, 22, 22, 0.7);
+  /* submit버튼의 박스 그림자 설정 */
+  box-shadow: 3px 3px 5px rgba(225, 225, 225, 0.5);
+  font-family: "Indie Flower", cursive;
+  color: rgba(214, 212, 212, 0.89);
+}
+
+.table_submit:active {
+  /* 제출 버튼을 눌렀을 때 색깔을 진하게 변경 */
+  background-color: rgb(66, 65, 65);
+}
+
+.table_submit:hover {
+  /* 제출 버튼에 마우스를 올렸을 때 커서를 포인터로 변경 */
+  cursor: pointer;
+}

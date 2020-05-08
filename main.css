@@ -1,0 +1,366 @@
+/* 레이아웃 스타일 */
+* {
+  /* 박스 사이즈를 테두리까지 포함해서 측정함 */
+  box-sizing: border-box;
+}
+
+/* body 여백, 이미지 설정 */
+body {
+  margin: 0px;
+  background-image: url(images/bg.png);
+}
+
+/* 상단 메뉴 레이아웃 */
+header {
+  /* border: 2px solid black; 레이아웃 확인용*/
+  margin: 14px auto;
+  width: 1080px;
+  height: 120px;
+}
+
+.header_left {
+  margin: 12px 10px;
+  width: 240px;
+  height: 70px;
+  /* border: 2px solid black; */
+  /* float로 상단 로고를 좌측에 배치 */
+  float: left;
+}
+
+.header_right {
+  margin: 12px 10px;
+  width: 700px;
+  height: 70px;
+  /* border: 2px solid black; */
+  /* float로 상단 메뉴를 우측에 배치 */
+  float: right;
+}
+
+/* 메인 컨텐츠 레이아웃 */
+.content_main {
+  margin: 15px auto;
+  width: 1080px;
+  height: 700px;
+  /* border: 2px solid black; */
+  /* float의 영향에서 벗어나기 위해 clear:both 사용 */
+  clear: both;
+}
+
+.content_left {
+  margin: 10px;
+  width: 480px;
+  height: 700px;
+  /* border: 2px solid black; */
+  /* 이미지를 좌측에 배치하기 위해 float사용 */
+  float: left;
+}
+
+.content_right_MV {
+  margin: 10px;
+  width: 540px;
+  height: 386px;
+  /* border: 2px solid black; */
+  float: right;
+}
+
+.content_right_link {
+  margin: 50px 10px 10px 10px;
+  width: 540px;
+  height: 229px;
+  /* border: 2px solid black; */
+  float: right;
+}
+
+/* 하단 메뉴 레이아웃 */
+footer {
+  margin: 0px auto;
+  margin-top: 50px;
+  width: 1080px;
+  height: 100px;
+  /* border: 2px solid black; */
+  clear: both;
+  /* 영역을 유연하게 배치하기 위해 display:flex 사용 */
+  display: flex;
+  /* 해당 클래스 하위 영역들을 일정한 간격으로 띄움 */
+  justify-content: space-between;
+  /* 해당 클래스 하위 영역들을 수직으로 가운데 정렬함 */
+  align-items: center;
+}
+
+.footer_left {
+  margin: 0px 0px 0px 10px;
+  width: 200px;
+  height: 80px;
+  /* border: 2px solid black; */
+  display: flex;
+  /* 하단 좌측 회사명/팬카페명을 수직 정렬하기 위해
+   flex의 방향을 설정 */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer_center {
+  width: 370px;
+  height: 80px;
+  /* border: 2px solid black; */
+  display: flex;
+  /* 하단 중앙 카피라이트를 가운데 정렬하기 위해 사용 */
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_right {
+  margin: 0px 10px 0px 0px;
+  width: 180px;
+  height: 80px;
+  /* border: 2px solid black; */
+}
+
+/* 상단 메뉴 세부 스타일 */
+.header_left {
+  padding: 18px 5px;
+  /* 구글폰트에서 얻어온 폰트 사용 */
+  font-family: "Ma Shan Zheng", cursive;
+  /* rgba로 rgb와 투명도(opacity)까지 설정 */
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 39px;
+}
+
+/* 좌측 상단 로고의 링크 색을 설정 */
+.header_left a {
+  color: rgba(255, 255, 255, 0.79);
+  text-decoration: none;
+}
+
+/* 마우스를 올리면 투명도가 진해지면서 하얀색이 되도록 함 */
+.header_left a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header_right_menu {
+  padding-right: 25px;
+  /* 리스트 스타일을 없애기 위함 */
+  list-style: none;
+  /* 리스트를 수평정렬 하기 위해 flex사용 */
+  display: flex;
+  /* 양 끝점을 기준으로 균등하게 퍼지도록 함 */
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+  font-family: "Ma Shan Zheng", cursive;
+  /* 하위 메뉴가 상단메뉴를 기준으로 나오도록 하기 위해 
+    position을 relative로 설정 */
+  position: relative;
+}
+
+/* 상단 메뉴의 메인 메뉴 링크문자열 색/강조 설정 */
+.header_right_menu > li > a:link {
+  color: rgba(255, 255, 255, 0.79);
+  text-decoration: none;
+}
+
+.header_right_menu > li > a:visited {
+  color: rgba(255, 255, 255, 0.79);
+}
+
+.header_right_menu > li > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header_right_menu ul {
+  /* 상단메뉴의 하위 메뉴를 우선 보이지 않도록 하기 위해
+    화면 아주 위쪽으로 올려둠 */
+  position: absolute;
+  top: -555px;
+  /* 다른 영역에 메뉴가 가려지지 않도록 z-index에 높은 값을 부여 */
+  z-index: 8888;
+}
+
+.header_right_menu ul li {
+  /* 상단메뉴의 하위메뉴들이 순서대로 펼쳐지도록 하기 위해
+  position을 relative로 설정 */
+  position: relative;
+  /* list의 장식 제거 */
+  list-style: none;
+}
+
+.header_right_menu ul li a {
+  /* 상단메뉴의 하위메뉴 링크문자열에서 영역 속성을 사용하기 위해
+  display를 block으로 설정 */
+  display: block;
+  font-size: 19px;
+  /* 행간 높이를 지정하기 위해 line-height사용 */
+  line-height: 23px;
+  /* 텍스트를 들여쓰기 하기 위해 사용 */
+  text-indent: -25px;
+}
+
+.header_right_menu li:hover > ul {
+  /* 상단메뉴에 마우스를 올리면 상단메뉴 아래로
+  하위메뉴를 가져올 수 있도록 위치를 설정함 */
+  position: absolute;
+  top: 25px;
+}
+
+/* 상단메뉴의 하위메뉴 링크문자열 속성 설정
+ 상단메뉴 글씨보다 작고 연하게 설정함 */
+.header_right_menu ul > li > a:link {
+  color: rgba(255, 255, 255, 0.39);
+  text-decoration: none;
+}
+
+.header_right_menu ul > li > a:visited {
+  color: rgba(255, 255, 255, 0.39);
+}
+
+.header_right_menu ul > li > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* 메인 컨텐츠 세부 스타일 */
+.content_left {
+  /* 좌측 컨텐츠는 이미지를 사용 */
+  background-image: url(images/left.jpg);
+  background-size: 480px 700px;
+}
+
+/* 메인 컨텐츠의 우측 하단 링크 영역의 제목 영역 설정 */
+.right_link_head {
+  margin-bottom: 11px;
+  padding: 15px;
+  font-size: 25px;
+  font-family: "Ma Shan Zheng", cursive;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+.right_link_body {
+  display: flex;
+  /* 중앙을 기준으로 균등하게 퍼지도록 함 */
+  justify-content: space-around;
+  align-items: center;
+  /* 텍스트를 중앙정렬함 */
+  text-align: center;
+}
+
+.right_link_body i {
+  /* 링크된 아이콘을 영역으로 설정하기 위함 */
+  display: block;
+  font-size: 100px;
+}
+
+.right_link_body a:link {
+  color: rgba(36, 33, 33, 0.44);
+}
+
+.right_link_body a:visited {
+  color: rgba(36, 33, 33, 0.44);
+}
+
+.right_link_body a:hover {
+  color: rgba(36, 33, 33, 0.88);
+}
+
+.link_body_span {
+  margin-top: 7px;
+  display: block;
+  font-size: 23px;
+  font-family: "Ma Shan Zheng", cursive;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+/* 하단 메뉴 세부 스타일 */
+.footer_left_enter {
+  /* 상하 여백 제거 후 수평으로 중앙정렬하기 위해 사용 */
+  margin: 0px auto;
+  font-size: 18px;
+  font-family: "Ma Shan Zheng", cursive;
+  color: rgba(214, 212, 212, 0.89);
+}
+
+.footer_left_soul {
+  margin: 0px auto;
+  font-size: 15px;
+  line-height: 10px;
+  font-family: "Ma Shan Zheng", cursive;
+  color: rgba(214, 212, 212, 0.89);
+}
+
+.footer_center {
+  font-size: 17px;
+  font-family: "Ma Shan Zheng", cursive;
+  color: rgba(214, 212, 212, 0.89);
+}
+
+.footer_right {
+  display: flex;
+  font-size: 34px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_right a:link {
+  color: rgba(214, 212, 212, 0.77);
+}
+
+.footer_right a:visited {
+  color: rgba(214, 212, 212, 0.77);
+}
+
+.footer_right a:hover {
+  color: rgba(233, 234, 233, 0.99);
+}
+
+/*오디오 버튼 스타일*/
+.audio-container {
+  width: 100px;
+  height: 100px;
+  /* 오디오 아이콘이 담길 영역을 설정하고 position:fixed로
+  스크롤이 내려가도 제자리에 있도록 고정함 */
+  position: fixed;
+  top: 157px;
+  right: 10px;
+}
+
+.audio-container i {
+  font-size: 100px;
+  color: rgba(36, 33, 33, 0.2);
+}
+
+.audio-container:hover {
+  /* 오디오 영역에 마우스가 올라가면 커서를 포인터 모양으로 바꿈 */
+  cursor: pointer;
+}
+
+/* 화면이 작을 때 표출될 div*/
+
+.small_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("images/small_screen.jpg");
+  display: flex;
+  /* 내부 텍스트를 정 중앙에 배치 */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 110px;
+  font-family: "Ma Shan Zheng", cursive;
+  /* 화면이 작아졌을 때는 전체 문서를 덮어야하기 때문에
+  레이아웃 내에서 가장 높은 z-index값을 부여함 */
+  z-index: 9999;
+  /* 화면이 커졌을 때는 보이지 않도록(영역을 차지하지 않도록)
+   하기 위해 display를 none으로 설정 */
+  display: none;
+}
+
+/* media속성을 이용해서 화면이 760px일때까지는
+위에서 설정한 div태그가 화면에 나타나도록 함 */
+@media screen and (max-width: 760px) {
+  .small_screen {
+    /* 그러기 위해서 다시 display를 flex로 설정 */
+    display: flex;
+  }
+}

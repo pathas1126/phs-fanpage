@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PHS_fanPage</title>
+    <link rel="stylesheet" href="main.css " />
+    <!-- 구글 폰트를 사용하기 위해 Google Fonts 링크 -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘을 사용하기 위해 fontawesome 연결 -->
+    <script
+      src="https://kit.fontawesome.com/9df6aaa455.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- 게시물을 보호하기 위한 body 속성 설정 -->
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+  >
+    <!-- 상단 메뉴 -->
+    <header>
+      <!-- 상단 좌측 로고 -->
+      <div class="header_left">
+        <a href="#">Park Hyo Shin</a>
+      </div>
+      <!-- 상단 우측 메뉴 -->
+      <nav class="header_right">
+        <ul class="header_right_menu">
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#">Discography</a>
+            <ul>
+              <li><a href="#">Regular</a></li>
+              <li><a href="#">Mini, EP</a></li>
+              <li><a href="#">Single</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Concert</a>
+            <ul>
+              <li><a href="#">I am A Dreamer</a></li>
+              <li><a href="#">Lovers</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Musical</a>
+            <ul>
+              <li><a href="#">Elizabeth</a></li>
+              <li><a href="#">Phantom</a></li>
+              <li><a href="#">The Man Who Laughs</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 메인 컨텐츠 -->
+    <section class="content_main">
+      <!-- 메인 좌측 이미지 영역 -->
+      <section class="content_left"></section>
+      <!-- 메인 우측 비디오/링크 영역 -->
+      <section class="content_right">
+        <!-- 메인 우측 비디오 영역 -->
+        <article class="content_right_MV">
+          <!-- 비디오는 유투브에서 URL을 가져왔기 때문에
+          iframe태그를 사용함 -->
+          <iframe
+            width="540px"
+            height="386px"
+            src="https://www.youtube.com/embed/Xp8Ep1W-azw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </article>
+        <!-- 메인 우측 링크 영역-->
+        <article class="content_right_link">
+          <div class="right_link_head">
+            Link to
+          </div>
+          <div class="right_link_body">
+            <div class="link_body_company">
+              <a href="http://gloveent.com/glove/" target="_blank">
+                <i class="far fa-building"></i>
+              </a>
+              <span class="link_body_span">Company</span>
+            </div>
+            <div class="link_body_tree">
+              <a href="http://www.soultreepark.com/" target="_blank">
+                <i class="fas fa-tree"></i>
+              </a>
+              <span class="link_body_span">Fan Club</span>
+            </div>
+            <div class="link_body_survey">
+              <a href="survey.html" target="_self">
+                <i class="far fa-clipboard"></i>
+              </a>
+              <span class="link_body_span">Survey</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+    <!-- 하단 메뉴 -->
+    <footer>
+      <!-- 하단 좌측 회사명/팬카페명 -->
+      <div class="footer_left">
+        <div class="footer_left_enter">
+          Globe Entertainment
+        </div>
+        <div class="footer_left_soul">
+          soul_three
+        </div>
+      </div>
+      <!-- 하단 중앙 카피라이트 -->
+      <div class="footer_center">
+        Copyright © Globe ALL Rights Reserved.
+      </div>
+      <!-- 하단 우측 SNS -->
+      <div class="footer_right">
+        <a
+          href="https://www.instagram.com/parkhyoshin.official/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/c/gloveent" target="_blank"
+          ><i class="fab fa-youtube-square"></i
+        ></a>
+        <a href="https://twitter.com/realcaptainpark" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+        <a href="#"><i class="fab fa-facebook-square" id="seeU"></i></a>
+      </div>
+    </footer>
+    <!-- 화면 우측 오디오 재생 버튼 -->
+    <div class="audio-container">
+      <i class="far fa-play-circle" id="audio_player"></i>
+    </div>
+    <!-- 화면이 작아졌을 때 표시할 영역 -->
+    <div class="small_screen">
+      <span class="small_screen-text">Make your screen wide, Plz🤗</span>
+    </div>
+    <!-- 자바스크립트 연결 -->
+    <script src="main.js"></script>
+  </body>
+</html>
