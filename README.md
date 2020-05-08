@@ -1,5 +1,6 @@
 # PHS 팬 페이지
 박효신 팬사이트의 메인 페이지 및 설문조사 페이지입니다.
+https://pathas1126.github.io/phs-fanpage/
 
 ## 사용 언어
 - HTML
